@@ -1,0 +1,836 @@
+/*
+Theme Name: Donkin's Theme
+Theme URI: http://www.idontchop.com/
+Author: Nathan Dunn
+Version: 0.9
+Author URI: http://www.donkinurmum.com/
+Description: Amateur Donkey Poker Theme. My first theme, did my best
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: poker, donkey
+
+
+*/
+
+
+/********
+Variables
+*********/
+
+:root { /* doesn't work in IE lol */
+	--donkin-brown: #563200;
+}
+
+
+body {
+	background: #FFF6EA;
+	margin: 0;
+}
+
+.clearfix {
+	clear: both;
+}
+
+
+
+header {
+	overflow: auto;
+	width: 100%;
+	max-width: 1300px;
+	padding: 0.2em;
+}
+
+footer {
+	clear: both;
+	max-width: 1000px;
+	text-align: center;
+	margin: 2em;
+	padding: 2em;
+}
+
+
+h1 {
+	color: #563200;
+	padding: 0;
+	margin: 1em;
+
+}
+
+h2 {
+	color: #563200;
+	padding: 0;
+	margin: 1em 0.2em;
+	text-indent: 0;
+}
+
+h3 {
+	color: #563200;
+	padding: 0;
+	margin: 1em;
+}
+
+h4 {
+	color: black;
+}
+
+
+
+p {
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	margin: 1em 0.2em;
+	font-size: 1.1em;
+}
+
+.textwidget {
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	text-indent: 0;
+	color: #563200;
+}
+
+a {
+	color: #7F5300;
+}
+
+a:hover {
+	color: #7C0000;
+}
+
+
+
+
+ul {
+	list-style-type: circle;
+	margin: 0 0.2em;
+	padding: 1em;
+	
+}
+
+
+
+li {
+	margin: 2px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
+/* Header
+**************************/
+
+img.donkinLogo {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 80px;
+}
+
+img.articleHeader {
+	vertical-align: top;
+	width: 100%;
+	margin: 2px 0px 2px 0px;
+	padding: 0;
+	box-shadow: .2em .2em .1em #000;
+}
+
+.donkinHeader {
+	text-align: center;
+	vertical-align: top;
+	font-family: coustard, Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	font-size: 1.7em;
+	z-index: 1;
+	max-width: 95%;
+	overflow: hidden;
+	margin: 0;
+}
+
+.donkinNavBar {
+	display: inline-block;
+	vertical-align: top;
+	background-color: #563200;
+	color: #D8D0BC;
+	padding: 0.0em 0.4em;
+	margin: 0em;
+	width: auto;
+	border-radius: 0.4em;
+	box-shadow: 0.1em 0.1em .2em #563200;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	text-transform: uppercase;
+	font-size: .8em;
+	
+}
+
+.donkinNavTitle {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+
+.donkinNavTitle a{
+	display: inline-block;
+	text-decoration: none;
+	padding: 0.2em;
+	color: #D8D0BC;
+}
+
+.donkinNavTitle li {
+	display: inline;
+
+}
+
+.donkinNavTitle a:hover {
+	display: inline-block;
+	background-color: black;
+	color: #D8D0BC;
+}
+
+.container {
+	max-width: 1366px;
+}
+
+
+
+.donkinNavFix {
+
+}
+
+
+.donkinHeaderH1 {
+	display: inline-block;
+	z-index: 1;
+	margin: 0;
+}
+
+.donkinHeaderH1Small {
+	margin: 0;
+	z-index: 2;
+	font-size: 1.2em;
+	display: none;
+}
+
+.headerImage {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	z-index: -5;
+	top: -200px;
+	left: 50%;
+	border: thin solid black;
+}
+
+.headerContainer {
+	margin: 0;
+	padding: 0;
+	max-width: 1366px;
+	width: 100%;
+}
+
+.donkinSubHeader {
+	border: 0;
+	padding: 0;
+	border-bottom: solid thin #563200;
+	margin-bottom: 1px;
+}
+
+
+/* Sidebar
+******************************/
+
+donkinSidebar {
+	text-indent: 0;
+}
+
+aside {
+	margin: 0;
+	padding: 0.0em;
+	float: left;
+	width: auto;
+	display: block;
+}
+
+.donkinSideBarList {
+	list-style-image: url('/images/DonkeyAuthor.png');
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	
+}
+
+/* Front page
+*******************************/
+
+.main {
+	max-width: 768px;
+	width: 100%;
+	clear: both;
+	float: left;
+	margin: 0;
+	display: inline-block;
+	padding: 0.0em;
+	
+}
+
+.mainPage {
+	margin: 0.3em 1em;
+	width: calc(100% - 4em);
+	padding: 1em;
+	
+}
+
+
+/* Article
+*******************************/
+
+
+.article-img {
+	float: left;
+	display: inline-block;
+	padding: auto;
+	overflow: auto;
+}
+
+
+
+article {
+	background: #F8E5BC;
+	clear: both;
+	padding: 0.0em;
+	display: inline-block;
+	max-width: 100%;
+	border-bottom: solid 1px black;
+	margin: 0.0em;
+	box-shadow: 0.0em 0.1em .2em #563200;
+	
+}
+
+
+.article-h1 {
+	float: left;
+	border-bottom: 2px solid #563200;
+	padding-bottom: 2px;
+	padding: 0;
+	margin: 0;
+	display: block;
+	text-decoration: none;
+}
+
+
+.article-h2 {
+	float: left;
+	border-bottom: 2px solid #563200;
+	padding-bottom: 2px;
+	padding: 0;
+	margin: 0;
+	display: block;
+	text-decoration: none;
+}
+
+.article-h3 {
+	border-bottom: 2px solid #563200;
+	padding-bottom: 2px;
+	display: block;
+	text-decortation: underline;
+}
+
+
+.article-author-div {
+	text-align: right;
+	margin: 1px 0px;
+}
+
+.article-author {
+	text-align: right;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	color: #563200;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	vertical-align: middle;
+	padding: 0;
+	margin: 2px 2px 0px 2px;
+}
+
+.authorLogo {
+	vertical-align: middle;
+	margin: 0px 2px;
+	padding: 0;
+}
+
+.article-header {
+	border: 0;
+	padding: 0;
+	border-bottom: solid thin #563200;
+	margin: 1em 0em 0em 0em;
+}
+
+
+
+
+.articleMetaDiv {
+	text-align: left;
+	margin-right: 0.2em;
+	padding: 0.2em;
+	display: inline-block;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	font-size: 0.9em;
+}
+
+.articleMeta {
+	color: #563200;
+	border-top: solid #563200 thin;
+	margin: .3em 0.0em;
+	padding: 0.3em 0.0em 0.0em 0.0em;
+	text-align: left;
+}
+
+.articleTopImage {
+	z-index: -20;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	margin: auto;
+	max-width: 1366px;
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	
+}
+
+.articlePage {
+	margin: 1em;
+	width: calc(100% - 4em);
+	padding: 1em;
+}
+
+.articleIndex {
+	z-index: 20;
+	height: 400px;
+	width: auto;
+	max-width: 1366px;
+	background: -webkit-linear-gradient(top, rgba(248,229,188,1) 0%,rgba(248,229,188,0.70) 18%,rgba(248,229,188,0.50) 20%,rgba(248,229,188,0.20) 25%,rgba(248,229,188,0.10) 27%,rgba(248,229,188,0) 30%);
+	background: linear-gradient(rgba(248,229,188,1) 0%,rgba(248,229,188,0.70) 18%,rgba(248,229,188,0.50) 20%,rgba(248,229,188,0.20) 25%,rgba(248,229,188,0.10) 27%,rgba(248,229,188,0) 30%);
+}
+
+.articlecontainer {
+	max-width: 1366px;
+
+}
+
+.articleContent {
+	text-indent: 1em;
+	font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif';
+	padding-top: 0.2em;
+}
+
+.nextContent {
+	float: left;
+	width: auto;
+	display: block;
+	padding: 1em 1em 0em 0em;
+	margin: 0.0em;
+}
+
+.relatedContent {
+	float: left;
+	display: block;
+	padding: 1em;
+	margin: 0em;
+}
+
+.article-h4 {
+
+}
+
+.donkinNextLogo {
+	height: auto;
+	width: 3em;
+	float: left;
+}
+
+.container-next {
+	display: inline-block;
+	max-width: 15em;
+	vertical-align: top;
+	margin: 0em 0.5em;
+}
+
+.articleNav {
+	width: 100%;
+	overflow: hidden;
+}
+
+.navPrevious {
+	float: left;
+	width: 50%;
+}
+
+.navigation {
+	width: 100%;
+	text-align: center;
+}
+
+.navNext {
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+
+.nav-h4 {
+	color: white;
+	background-color: #563200;
+	padding: 0.5em;
+	font-size: 1.2em;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.nav-h4 a {
+	color: white;
+}
+
+
+.next-h3 {
+	margin-left: 0.2em;
+}
+
+.related-h3 {
+	float: right;
+}
+
+a:link.articleTitleLink {
+	text-decoration: none;
+}
+a:active.articleTitleLink {
+	text-decoration: none;
+}
+
+a:visited.articleTitleLink {
+	text-decoration: none;
+}
+
+a:hover.articleTitleLink {
+	text-decoration: none;
+}
+
+
+/* form styles */
+/***************************/
+
+#formcontainer {
+	float: right;
+}
+
+form {
+	background-color: #DFC29C;
+	/*box-shadow: 2px 2px 10px white;*/
+	border-radius: 5px;
+	border: thin black solid;
+	max-width: 100%;
+	padding: 0.5em;
+}
+
+label {
+	margin: 1px 15px 1px 1px;
+	padding: 1px;
+	color: black;
+	float: left;
+	text-align: right;
+	clear: both;
+}
+
+legend {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 1.5em;
+}
+
+input {
+	display: block;
+	padding: 1px;
+	margin: 1px;
+}
+
+textarea {
+	background-color: white;
+	display: block;
+	max-width: 100%;
+}
+
+input[type=submit], input[type=reset] {
+	background-color: #F8E5BC;
+	display: block;
+	margin: 10px;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	font: bold;
+	font-size: 1em;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 3px 3px 6px white;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+	background-color: aliceblue;
+}
+
+/* leftover from design */
+.pokerinformation {
+	background-color: #DFC29C;
+	box-shadow: 2px 2px 10px white;
+	border-radius: 5px;
+	border: thin black solid;
+	text-align: center;
+}
+
+.pokerinformation label {
+	width: 25%;
+	margin: 1px 1px 1px 15px;
+	padding: 1px;
+	color: black;
+	text-align: left;	
+}
+
+.pokerinformation legend {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 1.5em;
+	text-align: left;
+}
+
+
+/* Tables */
+/*******************/
+
+table {
+	width: 80%;
+	margin: auto;
+	border-collapse: collapse;
+	padding: 15px;
+	empty-cells: show;
+	border-spacing: 0;
+}
+
+td,th {
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	font-size: 1.2em;
+	padding: 15px;
+	border: thin solid black;
+}
+
+.table-on {
+	background-color: blueviolet;
+}
+
+
+
+
+
+/* WordPress content 
+***********************/
+
+.wp-caption {
+	max-width: 100%;
+	text-indent: 0;
+	padding: 0;
+	margin-bottom: 1em;
+}
+
+.wp-caption-text {
+	color: #563200;
+	font-style: italic;
+	margin: 0.3em 0.0em 0.0em 0.0em;
+}
+
+.aligncenter, .alignleft, .alignright {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.size-full {
+	max-width: 100%;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media rules, large browser*/
+@media only screen and (min-width: 1366px) {
+	
+	.main {
+		width: 1250px;
+		max-width: 1250px;
+	}
+	
+	article.mainPage {
+		width: 472px;
+		margin: 0;
+		vertical-align: top;
+	}
+	
+	.container {
+		width: 100%;
+	}
+}
+
+
+
+/* media rules, table small browser */
+@media only screen and (min-width: 768px) {
+	
+	.main {
+		max-width: 75%;
+		margin: -50px 0px 0px 10px;
+	}
+	aside {
+		max-width: 21%;
+		margin: 0px 0px 0px 10px;
+	}
+	.container {
+		width: 100%
+	}
+	
+	.articlePage {
+
+	}
+	
+	.articleIndex {
+		height: 300px;
+	}
+
+}
+
+/* media rules, medium browser */
+@media only screen and (min-width: 1050px) {
+	.articleIndex {
+		height: 400px;
+	}
+}
+
+/* media rules weird size */
+@media only screen and (max-width: 765px) {
+	
+	.main {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.articlePage {
+		margin: 0;
+		padding: 1em;
+		width: calc(100% - 2em);
+	}
+	
+	.mainPage {
+		margin: 0.3em 0.3em;
+		width: calc(100% - 1em);
+		padding: 0.2em;
+	}
+	
+
+	.donkinHeaderH1 {
+		display: none;
+	}
+	
+	.donkinHeaderH1Small {
+		display: inline-block;
+	}
+	
+	img.donkinLogo {
+		max-width: 50px;
+		float: left;
+	}
+	
+	.donkinNextLogo {
+		width: 2em;
+	}
+	
+	.donkinNavBar {
+		display: inline-block;
+		font-size: 0.6em;
+	}
+	
+	.article-h4 {
+		font-size: 0.9em;
+	}
+	
+	.container {
+		margin: 0;
+	}
+	
+	.container-next {
+		max-width: 10em;
+	}
+	
+	.articlecontainer {
+		margin: 0;
+	}
+	
+	.articleIndex {
+		height: 200px;
+	}
+}
+
+/* media rules, header image squish*/
+@media only screen and (max-width: 475px) {
+	.articleIndex {
+		height: 150px;
+	}
+	
+	.articlePage {
+		margin: 0;
+		padding: 0.2em;
+		width: calc(100% - 0.4em);
+	}
+}
+
+/* media rules, small phones */
+@media only screen and (max-width: 375px) {
+	.donkinHeaderH1 {
+		display: none;
+	}
+	
+	img.donkinLogo {
+		max-width: 50px;
+		float: left;
+	}
+
+	
+	.donkinNavBar {
+		display: inline-block;
+		float: right;
+		font-size: 0.4em;
+	}
+	
+	.donkinNavLink {
+		display: block;
+	}
+	
+	.container-next {
+		max-width: 8em;
+	}
+	
+	.articleIndex {
+		height: 100px;
+	}
+	
+	.article-h2 {
+		font-size: 1.2em;
+	}
+}
+
+
