@@ -17,7 +17,7 @@
 
 				/* support for asides and posts. Asides show all the content with no header */
 
-				get_template_part('template-parts/index',get_post_format()); ?>
+				get_template_part('template-parts/main',get_post_format()); ?>
 
 
 
