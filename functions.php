@@ -5,6 +5,15 @@
 
 
 
+/* Remove jetpack related posts, I'll do it myself, thank you! */
+function jetpackme_remove_rp() {
+	if ( class_exists( 'Jetpack_relatedPosts')) {
+		$jprp = Jetpack_relatedPosts::init();
+		$callback = array ( $jprp, 'filter_add_target_to_dom' );
+		remove_filter( 'the_content', $callback, 40);
+	}
+}
+add_filter ('wp', 'jetpackme_remove_rp',20);
 
 function donkin_scripts () {
 	$donkin_theme_version = wp_get_theme()['Version'];
